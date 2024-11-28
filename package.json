@@ -1,0 +1,43 @@
+{
+    "name": "react-todo-app",
+    "version": "1.0.0",
+    "description": "A simple React-based to-do app",
+    "keywords": [
+        "react",
+        "todo",
+        "app"
+    ],
+    "main": "src/index.jsx",
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "^5.0.1"
+    },
+    "devDependencies": {
+        "@babel/runtime": "^7.23.0",
+        "eslint": "^8.48.0",
+        "eslint-plugin-react": "^7.33.0",
+        "sass": "^1.81.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "lint": "eslint src/*.{js,jsx}",
+        "build-css": "sass src/styles.scss src/styles.css",
+        "watch-css": "sass --watch src/styles.scss src/styles.css"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
