@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true, // ブラウザ環境用
+        "es2021": true // 最新のECMAScriptをサポート
+    },
+    "extends": [
+        "eslint:recommended", // 推奨設定
+        "plugin:react/recommended" // React向け設定
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true // JSX構文を許可
+        },
+        "ecmaVersion": 12, // ECMAScript 2021を使用
+        "sourceType": "module" // ESモジュールを許可
+    },
+    "plugins": ["react"], // React関連のルールを有効化
+    "rules": {
+        "react/prop-types": "off" // PropTypesの使用を無効化
+    }
+}
