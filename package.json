@@ -26,7 +26,7 @@
         "eject": "react-scripts eject",
         "lint": "eslint src/*.{js,jsx}",
         "build-css": "sass src/styles.scss src/styles.css",
-        "watch-css": "sass --watch src/styles.scss src/styles.css"
+        "watch-css": "sass --watch src/styles/styles.scss src/styles/styles.css"
     },
     "browserslist": {
         "production": [
