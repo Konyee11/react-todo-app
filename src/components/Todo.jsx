@@ -36,6 +36,17 @@ export const Todo = () => {
         setCompleteTodos(newCompleteTodos);
     };
 
+    const onClickUndo = (index) => {
+        const newCompleteTodos = [...completeTodos]; // 完了のTodoリストをコピー
+        newCompleteTodos.splice(index, 1); // 完了のTodoリストから削除
+
+        const newIncompleteTodos = [...incompleteTodos, completeTodos[index]]; // 未完了のTodoリストに追加
+
+        // 未完了のTodoリストと完了のTodoリストを更新
+        setCompleteTodos(newCompleteTodos);
+        setIncompleteTodos(newIncompleteTodos);
+    };
+
     return (
         <div id="container">
             <div className="input-area">
@@ -79,10 +90,15 @@ export const Todo = () => {
             <div className="complete-area">
                 <p>完了のTodo</p>
                 <ul className="complete-area__ul">
-                    {completeTodos.map((todo) => (
+                    {completeTodos.map((todo, index) => (
                         <li className="complete-area__li" key={todo}>
                             <p className="todo-item">{todo}</p>
-                            <button className="btn btn__undo">戻す</button>
+                            <button
+                                className="btn btn__undo"
+                                onClick={() => onClickUndo(index)}
+                            >
+                                戻す
+                            </button>
                         </li>
                     ))}
                 </ul>
