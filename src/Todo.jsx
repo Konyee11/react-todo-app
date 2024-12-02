@@ -6,8 +6,8 @@ import { CompleteTodo } from "./components/CompleteTodo";
 
 export const Todo = () => {
     const [todoText, setTodoText] = useState("");
-    const [incompleteTodos, setIncompleteTodos] = useState(["洗濯", "買い物"]);
-    const [completeTodos, setCompleteTodos] = useState(["掃除", "料理"]);
+    const [incompleteTodos, setIncompleteTodos] = useState([]);
+    const [completeTodos, setCompleteTodos] = useState([]);
 
     // テキストボックスに入力した文字列をセット
     const onChangeTodoText = (event) => setTodoText(event.target.value);
